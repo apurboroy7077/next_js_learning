@@ -1,3 +1,6 @@
+import NotFound from "@/app/not-found";
+import { notFound } from "next/navigation";
+
 type paramsType = {
   params: {
     productId: string;
@@ -6,6 +9,9 @@ type paramsType = {
 };
 const page = ({ params }: paramsType) => {
   let { productId, reviewId } = params;
+  if (reviewId.length > 10) {
+    notFound();
+  }
   return (
     <div>
       <h1>
