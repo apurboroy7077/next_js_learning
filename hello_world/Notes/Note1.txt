@@ -1,2 +1,3 @@
 1. If you write underscore(_) before a folder name, the folder becomes private.
 2. Wrap a folder's name with First Bracket if you want to make it a Route Group.
+3. To generate metadata dynamically, metadata's export function name must be generateMetadata

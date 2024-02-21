@@ -1,7 +1,13 @@
 import React from "react";
+import { setTimeout } from "timers/promises";
 type paramsType = {
   params: {
     productId: string;
+  };
+};
+let generateMetadata = ({ params }: paramsType) => {
+  return {
+    title: `Product ${params.productId}`,
   };
 };
 const page = ({ params }: paramsType) => {
@@ -12,4 +18,5 @@ const page = ({ params }: paramsType) => {
   );
 };
 
+export { generateMetadata };
 export default page;
