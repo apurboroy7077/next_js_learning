@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-const page = () => {
+const Page = () => {
   let router = useRouter();
   let handleClick = () => {
     router.push("/");
@@ -37,4 +37,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

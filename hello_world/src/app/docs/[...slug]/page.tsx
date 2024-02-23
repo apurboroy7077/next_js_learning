@@ -1,3 +1,5 @@
+import ar7id from "ar7id";
+
 type paramsType = {
   params: {
     slug: string[];
@@ -11,7 +13,7 @@ const page = ({ params }: paramsType) => {
         <h1>Docs Home Page</h1>
       </div>
       {params.slug.map((product) => {
-        return <h3>{product}</h3>;
+        return <h3 key={ar7id()}>{product}</h3>;
       })}
     </>
   );
