@@ -1,4 +1,4 @@
-import NotFound from "@/app/not-found";
+"use client";
 import { notFound } from "next/navigation";
 
 type paramsType = {
