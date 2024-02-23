@@ -5,14 +5,16 @@ type propsType = {
   users: React.ReactNode;
   revenue: React.ReactNode;
   notifications: React.ReactNode;
+  login: React.ReactNode;
 };
 let ComplexDashboardLayout = ({
   children,
   users,
   revenue,
   notifications,
+  login,
 }: propsType) => {
-  return (
+  let loginTrueCode = (
     <>
       <TheRedCard>
         <div>
@@ -25,5 +27,16 @@ let ComplexDashboardLayout = ({
       </TheRedCard>
     </>
   );
+  let loginFalseCode = (
+    <>
+      <div>{login}</div>
+    </>
+  );
+  let isLoggedIn = false;
+  if (isLoggedIn) {
+    return loginTrueCode;
+  } else {
+    return loginFalseCode;
+  }
 };
 export default ComplexDashboardLayout;
