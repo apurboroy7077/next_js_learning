@@ -15,4 +15,11 @@ let PATCH = async (request: Request, { params }: propsType) => {
   comments[index].text = text;
   return Response.json(comments[index]);
 };
-export { GET, PATCH };
+let DELETE = async (request: Request, { params }: propsType) => {
+  let id = Number(params.id);
+  let index = comments.findIndex((comment) => id == comment.id);
+  let deletedComment = comments[index];
+  comments.splice(index, 1);
+  return Response.json(deletedComment);
+};
+export { GET, PATCH, DELETE };
