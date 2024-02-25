@@ -2,3 +2,4 @@
 2. Wrap a folder's name with First Bracket if you want to make it a Route Group.
 3. To generate metadata dynamically, metadata's export function name must be generateMetadata
 4. The useRouter hook should now be imported from "next/navigation", not "next/router"
+5. const dynamic = "force-dynamic"; it must be a constant means const always. let will not work here.
